@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissor</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon"
+        href="https://imgs.search.brave.com/U_57slBrCDeqHlHo4PZSlMKQhyyCm61emrYsTKqBkqw/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly91cGxv/YWQud2lraW1lZGlh/Lm9yZy93aWtpcGVk/aWEvY29tbW9ucy90/aHVtYi82LzY3L1Jv/Y2stcGFwZXItc2Np/c3NvcnMuc3ZnLzUx/MnB4LVJvY2stcGFw/ZXItc2Npc3NvcnMu/c3ZnLnBuZw"
+        type="image/x-icon">
+</head>
+
+<body>
+    <div class="overlay" id="overlay"></div>
+
+    <div class="custom-alert" id="customAlert">
+        <p>The one <strong>(User or Computer)</strong> who makes 10 points first is the winner!</p>
+        <button class="alert-close" id="alertClose">Go!</button>
+    </div>
+    <h1>ROCK PAPER SCISSOR</h1>
+    <div class="choices">
+        <div class="choice">
+            <img src="images/rock.png" id="rock">
+        </div>
+        <div class="choice">
+            <img src="images/paper.png" id="paper">
+        </div>
+        <div class="choice">
+            <img src="images/scissors.png" id="scissor">
+        </div>
+    </div>
+    <div class="scoreBoard">
+        <div class="youDiv">
+            <p class="playerScore">0</p>
+            <p class="p">You</p>
+        </div>
+        <div class="computerDiv">
+            <p class="computerScore">0</p>
+            <p class="p">Computer</p>
+        </div>
+    </div>
+    <div class="msg-container">
+        <p class="msg">Make your Choice!</p>
+    </div>
+
+    <div class="overlay2" id="overlay2"></div>
+    <div class="custom-alert ca2" id="ca2">
+        <p><strong>Wanna play again!</strong></p>
+        <button class="yes" onclick="yes()">Yes</button>
+        <button class="no" onclick="no()">No</button>
+    </div>
+    <button class="reset">Reset Game</button>
+    <script src="script.js"></script>
+</body>
+
+</html>
