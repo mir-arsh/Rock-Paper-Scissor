@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rock Paper Scissor</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon"
         href="https://imgs.search.brave.com/U_57slBrCDeqHlHo4PZSlMKQhyyCm61emrYsTKqBkqw/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly91cGxv/YWQud2lraW1lZGlh/Lm9yZy93aWtpcGVk/aWEvY29tbW9ucy90/aHVtYi82LzY3L1Jv/Y2stcGFwZXItc2Np/c3NvcnMuc3ZnLzUx/MnB4LVJvY2stcGFw/ZXItc2Npc3NvcnMu/c3ZnLnBuZw"
@@ -13,45 +13,44 @@
 </head>
 
 <body>
+    <div class="container">
+        <h1>Rock Paper Scissors</h1>
+
+        <div class="score-board">
+            <div class="badge" id="user-label">You: <span id="user-score">0</span></div>
+            <div class="badge" id="computer-label">Computer: <span id="computer-score">0</span></div>
+        </div>
+
+        <div class="result-container">
+            <p id="action-message" class="action-message">Choose your weapon!</p>
+            <p id="result"></p>
+        </div>
+
+        <div class="choices">
+            <div class="choice" id="rock">
+                <i class="fas fa-hand-rock"></i>
+            </div>
+            <div class="choice" id="paper">
+                <i class="fas fa-hand-paper"></i>
+            </div>
+            <div class="choice" id="scissors">
+                <i class="fas fa-hand-scissors"></i>
+            </div>
+        </div>
+
+        <div class="controls">
+            <button id="reset">Reset Game</button>
+        </div>
+    </div>
+
     <div class="overlay" id="overlay"></div>
 
-    <div class="custom-alert" id="customAlert">
-        <p>The one <strong>(User or Computer)</strong> who makes 10 points first is the winner!</p>
-        <button class="alert-close" id="alertClose">Go!</button>
-    </div>
-    <h1>ROCK PAPER SCISSOR</h1>
-    <div class="choices">
-        <div class="choice">
-            <img src="images/rock.png" id="rock">
-        </div>
-        <div class="choice">
-            <img src="images/paper.png" id="paper">
-        </div>
-        <div class="choice">
-            <img src="images/scissors.png" id="scissor">
-        </div>
-    </div>
-    <div class="scoreBoard">
-        <div class="youDiv">
-            <p class="playerScore">0</p>
-            <p class="p">You</p>
-        </div>
-        <div class="computerDiv">
-            <p class="computerScore">0</p>
-            <p class="p">Computer</p>
-        </div>
-    </div>
-    <div class="msg-container">
-        <p class="msg">Make your Choice!</p>
+    <div class="winning-popup" id="winning-popup">
+        <h2>Game Over!</h2>
+        <p id="winning-message"></p>
+        <button id="play-again">Play Again</button>
     </div>
 
-    <div class="overlay2" id="overlay2"></div>
-    <div class="custom-alert ca2" id="ca2">
-        <p><strong>Wanna play again!</strong></p>
-        <button class="yes" onclick="yes()">Yes</button>
-        <button class="no" onclick="no()">No</button>
-    </div>
-    <button class="reset">Reset Game</button>
     <script src="script.js"></script>
 </body>
 
